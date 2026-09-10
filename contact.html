@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | L'Écrin Céline</title>
+<meta name="description" content="Une question sur une commande, un produit ou une livraison ? Contactez L'Écrin Céline, nous répondons sous 24h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-layout { display:grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4); align-items:start; }
+  @media (max-width: 860px) { .contact-layout { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: var(--space-2); }
+  .form-group label { display:block; font-weight:600; margin-bottom:6px; color: var(--color-noir); }
+  .form-group input, .form-group select, .form-group textarea {
+    width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--color-taupe-clair);
+    font-family: var(--font-corps); font-size:1rem; background: var(--color-blanc-casse);
+  }
+  .form-group textarea { min-height:140px; resize:vertical; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: 2px solid var(--color-or); outline-offset: 1px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">L'Écrin Céline</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Nos goodies</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="services.html" class="btn btn-secondary">Voir la boutique</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero" style="padding: var(--space-5) 0;">
+  <div class="container" style="grid-template-columns: 1fr;">
+    <div class="text-center" style="margin:0 auto;">
+      <span class="eyebrow" style="color:#E8C874;">Une question ?</span>
+      <h1>Contactez-nous</h1>
+      <p class="lead text-center">Commande, livraison, produit ou simple curiosité : notre équipe vous répond sous 24h ouvrées.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-layout">
+
+    <!--
+      Formulaire statique : ce site n'a pas de backend.
+      Avant mise en ligne, brancher l'attribut action sur un service de formulaire
+      (ex. Formspree, Shopify "Contact form" natif, ou un endpoint interne) —
+      sinon la soumission n'ira nulle part.
+    -->
+    <form class="card" style="border-top-color:#C9A24B;" action="#" method="POST">
+      <h3 style="margin-bottom: var(--space-2);">Envoyez-nous un message</h3>
+
+      <div class="form-group">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sujet">Sujet</label>
+        <select id="sujet" name="sujet">
+          <option>Question sur une commande</option>
+          <option>Question sur un produit</option>
+          <option>Livraison & retours</option>
+          <option>Autre demande</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Décrivez votre demande..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;">Envoyer le message</button>
+    </form>
+
+    <div>
+      <div class="card" style="margin-bottom: var(--space-3);">
+        <h3>Nos coordonnées</h3>
+        <p style="color:var(--color-taupe); margin-bottom:4px;">E-mail</p>
+        <p><a href="mailto:contact@ecrin-celine.fr" style="color:var(--color-bordeaux); font-weight:600;">contact@ecrin-celine.fr</a></p>
+        <p style="color:var(--color-taupe); margin-bottom:4px;">Délai de réponse</p>
+        <p>Sous 24h ouvrées, du lundi au vendredi.</p>
+      </div>
+      <div class="card">
+        <h3>Avant de nous écrire</h3>
+        <p style="color:var(--color-taupe);">La réponse à votre question se trouve peut-être déjà dans notre FAQ.</p>
+        <a href="index.html#faq" class="btn btn-secondary">Consulter la FAQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>L'Écrin Céline</h3>
+        <p style="opacity:.85;">Boutique de fans indépendante proposant des goodies hommage à Céline Dion.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Boutique</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Infos</h3>
+        <ul>
+          <li><a href="cgv.html">CGV</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      L'Écrin Céline est un site de fans indépendant, non affilié, non autorisé ni approuvé par Céline Dion, ses représentants ou tout ayant droit. Les produits proposés sont des créations hommage. © 2026 L'Écrin Céline.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
