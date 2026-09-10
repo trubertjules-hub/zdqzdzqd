@@ -36,6 +36,7 @@
     </ul>
     <div class="nav-cta">
       <a href="services.html" class="btn btn-secondary">Voir la boutique</a>
+      <a href="#" class="btn btn-primary snipcart-checkout" aria-label="Voir le panier" style="padding:10px 18px;">🛒 <span class="snipcart-items-count">0</span></a>
     </div>
     <button class="nav-toggle" aria-label="Menu">☰</button>
   </nav>
@@ -55,12 +56,18 @@
   <div class="container contact-layout">
 
     <!--
-      Formulaire statique : ce site n'a pas de backend.
-      Avant mise en ligne, brancher l'attribut action sur un service de formulaire
-      (ex. Formspree, Shopify "Contact form" natif, ou un endpoint interne) —
-      sinon la soumission n'ira nulle part.
+      Formulaire fonctionnel via FormSubmit.co (aucun compte requis) :
+      1) Remplace l'e-mail dans l'action ci-dessous par ta vraie adresse.
+      2) Le premier envoi déclenche un e-mail de confirmation FormSubmit à ouvrir
+         une seule fois pour activer la réception — sans ça les messages suivants
+         ne t'arriveront pas.
+      Alternative : brancher ce formulaire sur Formspree, ou le formulaire de
+      contact natif si tu migres vers Shopify.
     -->
-    <form class="card" style="border-top-color:#C9A24B;" action="#" method="POST">
+    <form class="card" style="border-top-color:#C9A24B;" action="https://formsubmit.co/contact@ecrin-celine.fr" method="POST">
+      <input type="hidden" name="_subject" value="Nouveau message — L'Écrin Céline">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
       <h3 style="margin-bottom: var(--space-2);">Envoyez-nous un message</h3>
 
       <div class="form-group">
@@ -138,6 +145,13 @@
     </div>
   </div>
 </footer>
+
+<!-- Panier Snipcart : voir GO-LIVE.md pour la configuration (clé API à remplacer). -->
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+<div hidden id="snipcart" data-api-key="VOTRE_CLE_API_PUBLIQUE_SNIPCART" data-config-modal-style="side"></div>
+<script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js" defer type="text/javascript"></script>
 
 </body>
 </html>

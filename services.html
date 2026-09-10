@@ -22,6 +22,7 @@
     </ul>
     <div class="nav-cta">
       <a href="index.html#faq" class="btn btn-secondary">FAQ</a>
+      <a href="#" class="btn btn-primary snipcart-checkout" aria-label="Voir le panier" style="padding:10px 18px;">🛒 <span class="snipcart-items-count">0</span></a>
     </div>
     <button class="nav-toggle" aria-label="Menu">☰</button>
   </nav>
@@ -47,7 +48,17 @@
         <p><strong>Description :</strong> Porte-clés émaillé en métal robuste, orné d'un visuel hommage exclusif. Format compact, fini brillant, attache résistante.</p>
         <p><strong>Client idéal :</strong> Le fan qui veut porter sa passion partout avec lui — sur son sac, ses clés de maison ou de voiture — sans que ça se voie trop.</p>
         <p><strong>Bénéfice clé :</strong> Un souvenir élégant et discret, à portée de main chaque jour, à moins de 15€.</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        <p style="font-family: var(--font-titres); font-size:1.4rem; color:var(--color-bordeaux); margin-bottom: var(--space-2);">12,90 €</p>
+        <button
+          class="snipcart-add-item btn btn-primary"
+          data-item-id="porte-cles-collector"
+          data-item-name="Porte-clés collector"
+          data-item-price="12.90"
+          data-item-url="/services.html"
+          data-item-image="images/porte-cles.jpg"
+          data-item-description="Porte-clés émaillé en métal, visuel hommage exclusif.">
+          Ajouter au panier
+        </button>
       </div>
     </div>
   </div>
@@ -62,7 +73,17 @@
         <p><strong>Description :</strong> Mug en céramique 300ml, résistant au lave-vaisselle et au micro-ondes, avec un visage hommage imprimé haute définition qui ne s'efface pas.</p>
         <p><strong>Client idéal :</strong> Celui ou celle qui commence chaque journée par un café ou un thé et veut retrouver un peu de magie dans ce petit rituel.</p>
         <p><strong>Bénéfice clé :</strong> Transformer une habitude banale en moment plaisir, matin après matin.</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        <p style="font-family: var(--font-titres); font-size:1.4rem; color:var(--color-bordeaux); margin-bottom: var(--space-2);">16,90 €</p>
+        <button
+          class="snipcart-add-item btn btn-primary"
+          data-item-id="mug-edition-fan"
+          data-item-name="Mug édition fan"
+          data-item-price="16.90"
+          data-item-url="/services.html"
+          data-item-image="images/mug.jpg"
+          data-item-description="Mug céramique 300ml, visuel hommage imprimé haute définition.">
+          Ajouter au panier
+        </button>
       </div>
       <div class="hero-image" style="aspect-ratio:1/1; background: linear-gradient(160deg, var(--color-bordeaux) 0%, var(--color-bordeaux-dark) 100%); color:#EFE3E9;">Photo : mug édition fan</div>
     </div>
@@ -79,7 +100,20 @@
         <p><strong>Description :</strong> T-shirt 100% coton, coupe unisexe, sérigraphie durable et douce au toucher. Disponible du XS au XXL.</p>
         <p><strong>Client idéal :</strong> Le fan qui veut afficher fièrement sa passion en concert, entre amis ou en soirée à thème.</p>
         <p><strong>Bénéfice clé :</strong> Un vêtement confortable qu'on porte vraiment, pas un souvenir qui prend la poussière dans un tiroir.</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        <p style="font-family: var(--font-titres); font-size:1.4rem; color:var(--color-bordeaux); margin-bottom: var(--space-2);">24,90 €</p>
+        <button
+          class="snipcart-add-item btn btn-primary"
+          data-item-id="tshirt-hommage"
+          data-item-name="T-shirt hommage"
+          data-item-price="24.90"
+          data-item-url="/services.html"
+          data-item-image="images/tshirt.jpg"
+          data-item-description="T-shirt 100% coton, coupe unisexe, sérigraphie durable."
+          data-item-custom1-name="Taille"
+          data-item-custom1-options="XS|S|M|L|XL|XXL"
+          data-item-custom1-required="true">
+          Ajouter au panier
+        </button>
       </div>
     </div>
   </div>
@@ -100,6 +134,19 @@
     </div>
   </div>
 </footer>
+
+<!--
+  PANIER / PAIEMENT — Snipcart
+  1) Crée un compte gratuit sur snipcart.com, active un mode de paiement (Stripe et/ou PayPal) dans son tableau de bord.
+  2) Remplace VOTRE_CLE_API_PUBLIQUE_SNIPCART ci-dessous par ta clé publique (Account > API Keys).
+  3) Passe la clé en mode "Live" quand tu es prêt à encaisser de vrais paiements (elle est en mode Test par défaut).
+  Voir GO-LIVE.md à la racine du projet pour la checklist complète de mise en ligne.
+-->
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+<div hidden id="snipcart" data-api-key="VOTRE_CLE_API_PUBLIQUE_SNIPCART" data-config-modal-style="side"></div>
+<script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js" defer type="text/javascript"></script>
 
 </body>
 </html>
