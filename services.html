@@ -11,6 +11,30 @@
 </head>
 <body>
 
+<!-- Définitions graphiques partagées par les 3 visuels produits ci-dessous -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="cd-heart" d="M50,86 C18,62 4,42 4,26 C4,10 18,-1 34,4 C43,7 48,14 50,21 C52,14 57,7 66,4 C82,-1 96,10 96,26 C96,42 82,62 50,86 Z"/>
+    <linearGradient id="bgMarble" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3EEE4"/>
+      <stop offset="100%" stop-color="#E7DFCF"/>
+    </linearGradient>
+    <linearGradient id="tagGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8A2547"/>
+      <stop offset="100%" stop-color="#5C1730"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2F2F2"/>
+      <stop offset="50%" stop-color="#B9B9B9"/>
+      <stop offset="100%" stop-color="#E8E8E8"/>
+    </linearGradient>
+    <linearGradient id="mugBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5C1730"/>
+      <stop offset="100%" stop-color="#3E0F20"/>
+    </linearGradient>
+  </defs>
+</svg>
+
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="logo">L'Écrin Céline</a>
@@ -41,7 +65,20 @@
 <section id="porte-cles">
   <div class="container">
     <div class="card" style="display:grid; grid-template-columns: 1fr 1.4fr; gap: var(--space-4); border-top:none; border-left:4px solid var(--color-or);">
-      <div class="hero-image" style="aspect-ratio:1/1;">Photo : porte-clés émaillé collector</div>
+      <div class="hero-image" style="aspect-ratio:1/1; padding:0; overflow:hidden;">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Porte-clés bordeaux et or gravé « Fan pour la vie »" style="width:100%; height:100%;">
+          <rect width="300" height="300" fill="url(#bgMarble)"/>
+          <ellipse cx="150" cy="255" rx="70" ry="12" fill="#000000" opacity="0.08"/>
+          <circle cx="150" cy="55" r="16" fill="none" stroke="url(#ringGrad)" stroke-width="6"/>
+          <rect x="146" y="66" width="8" height="18" rx="3" fill="#B9B9B9"/>
+          <rect x="80" y="78" width="140" height="180" rx="16" fill="url(#tagGrad)"/>
+          <rect x="90" y="88" width="120" height="160" rx="10" fill="none" stroke="#C9A24B" stroke-width="1.5"/>
+          <use href="#cd-heart" transform="translate(132,100) scale(0.36)" fill="#C9A24B"/>
+          <text x="150" y="185" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="3" fill="#C9A24B">FAN</text>
+          <text x="150" y="212" text-anchor="middle" font-family="'Playfair Display', serif" font-style="italic" font-weight="700" font-size="21" fill="#FAF7F2">Pour la vie</text>
+          <line x1="115" y1="225" x2="185" y2="225" stroke="#C9A24B" stroke-width="1"/>
+        </svg>
+      </div>
       <div>
         <span class="eyebrow">Service 1</span>
         <h3 style="font-size:1.5rem; color:var(--color-bordeaux);">Porte-clés collector</h3>
@@ -85,7 +122,19 @@
           Ajouter au panier
         </button>
       </div>
-      <div class="hero-image" style="aspect-ratio:1/1; background: linear-gradient(160deg, var(--color-bordeaux) 0%, var(--color-bordeaux-dark) 100%); color:#EFE3E9;">Photo : mug édition fan</div>
+      <div class="hero-image" style="aspect-ratio:1/1; padding:0; overflow:hidden;">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Mug crème avec bandeau bordeaux et monogramme CD doré" style="width:100%; height:100%;">
+          <rect width="300" height="300" fill="url(#mugBg)"/>
+          <ellipse cx="150" cy="255" rx="90" ry="14" fill="#000000" opacity="0.18"/>
+          <path d="M95,95 h110 v120 a10,10 0 0 1 -10,10 h-90 a10,10 0 0 1 -10,-10 Z" fill="#FAF7F2"/>
+          <path d="M205,120 c35,0 35,55 0,55" fill="none" stroke="#FAF7F2" stroke-width="12"/>
+          <rect x="95" y="150" width="110" height="46" fill="#7A1F3D"/>
+          <line x1="95" y1="150" x2="205" y2="150" stroke="#C9A24B" stroke-width="2"/>
+          <line x1="95" y1="196" x2="205" y2="196" stroke="#C9A24B" stroke-width="2"/>
+          <text x="150" y="180" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="800" font-size="30" fill="#C9A24B">CD</text>
+          <text x="150" y="230" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="3" fill="#F0DEE5">ÉDITION FAN</text>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
@@ -93,7 +142,17 @@
 <section id="tshirts">
   <div class="container">
     <div class="card" style="display:grid; grid-template-columns: 1fr 1.4fr; gap: var(--space-4); border-top:none; border-left:4px solid var(--color-or);">
-      <div class="hero-image" style="aspect-ratio:1/1;">Photo : t-shirt hommage coupe unisexe</div>
+      <div class="hero-image" style="aspect-ratio:1/1; padding:0; overflow:hidden;">
+        <svg viewBox="0 0 300 300" role="img" aria-label="T-shirt crème avec cœur doré et texte « Fan pour la vie »" style="width:100%; height:100%;">
+          <rect width="300" height="300" fill="url(#bgMarble)"/>
+          <ellipse cx="150" cy="270" rx="95" ry="12" fill="#000000" opacity="0.08"/>
+          <path d="M150,72 C136,72 136,58 108,58 L52,102 L82,138 L82,262 L218,262 L218,138 L248,102 L192,58 C192,58 164,72 150,72 Z"
+                fill="#FAF7F2" stroke="#E7E1D8" stroke-width="2"/>
+          <use href="#cd-heart" transform="translate(120,120) scale(0.5)" fill="#C9A24B"/>
+          <text x="150" y="205" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" letter-spacing="2" fill="#7A1F3D">FAN POUR LA VIE</text>
+          <text x="150" y="224" text-anchor="middle" font-family="'Playfair Display', serif" font-style="italic" font-size="12" fill="#8C8577">My Heart Will Go On</text>
+        </svg>
+      </div>
       <div>
         <span class="eyebrow">Service 3</span>
         <h3 style="font-size:1.5rem; color:var(--color-bordeaux);">T-shirts hommage</h3>
